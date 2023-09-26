@@ -177,6 +177,8 @@ export function Etapa() {
                                   margin='dense'
                                   variant='outlined'
                                   label='Nome da Etapa'
+                                  placeholder='Escolha um nome para o sua etapa'
+                                  InputLabelProps={{ shrink: true }}
                                   size='small'
                                   value={etapa.nomeEtapa}
                                   onChange={e => {
@@ -197,8 +199,9 @@ export function Etapa() {
                                   fullWidth
                                   margin='dense'
                                   variant='outlined'
-                                  label='Descreva brevemente a etapa'
                                   InputLabelProps={{ shrink: true }}
+                                  label='Descrição'
+                                  placeholder='Descreva brevemente o que deve acontecer nela'
                                   value={etapa.descricao}
                                   onChange={e => {
                                     const updatedEtapas = [...etapas];

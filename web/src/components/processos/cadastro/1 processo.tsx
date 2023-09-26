@@ -86,7 +86,9 @@ export function Processo() {
               fullWidth
               margin='dense'
               variant='outlined'
-              label='Nome do Processo'
+              placeholder='Escolha um nome para o seu processo'
+              label='Nome'
+              InputLabelProps={{ shrink: true }}
               {...getFieldProps('nome')}
             />
           </FormField>
@@ -123,7 +125,9 @@ export function Processo() {
                         fullWidth
                         margin='dense'
                         variant='outlined'
-                        label='Qual a configuração de permissão?'
+                        InputLabelProps={{ shrink: true }}
+                        placeholder='Qual a configuração de permissão?'
+                        label='Permissão'
                       />
                     </div>
                   </Tooltip>
@@ -142,8 +146,9 @@ export function Processo() {
               fullWidth
               margin='dense'
               variant='outlined'
-              label='Descreva brevemente o processo'
               InputLabelProps={{ shrink: true }}
+              label='Descrição'
+              placeholder='Descreva brevemente o processo'
               {...getFieldProps('descricao')}
             />
           </FormField>

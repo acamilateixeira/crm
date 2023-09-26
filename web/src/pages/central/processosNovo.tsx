@@ -9,12 +9,13 @@ import Stepper from '@mui/material/Stepper';
 import { Header } from '../../components/header';
 import { Processo } from '../../components/processos/cadastro/1 processo';
 import { Etapa } from '../../components/processos/cadastro/2 etapasProcesso';
+import { Campo } from '../../components/processos/cadastro/3 camposEtapa';
 import { useSteppers } from '../../hooks/useStepper';
 
 export function ProcessosNovo() {
   const { steps, handleReset, activeStep } = useSteppers();
 
-  const passos = [<Processo />, <Etapa />];
+  const passos = [<Campo />, <Processo />, <Etapa />];
 
   const exibir =
     Number(activeStep) + 1 < 9 ? (
@@ -55,8 +56,12 @@ export function ProcessosNovo() {
                   {step.nome}
                 </StepLabel>
 
-                <StepContent style={{ padding: '1.5em' }}>
-                  <Grid container component={Paper} style={{ textAlign: 'center', padding: '1em' }}>
+                <StepContent>
+                  <Grid
+                    container
+                    component={Paper}
+                    style={{ textAlign: 'center', padding: '1em 0 1em 0' }}
+                  >
                     {exibir}
                   </Grid>
                 </StepContent>
